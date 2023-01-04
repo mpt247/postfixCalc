@@ -26,21 +26,72 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        textField_expresion = new javax.swing.JTextField();
+        label_answer = new javax.swing.JLabel();
+        textfield_solution = new javax.swing.JTextField();
+        button_solve = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        textField_expresion.setBackground(new java.awt.Color(255, 255, 255));
+        textField_expresion.setForeground(new java.awt.Color(102, 102, 102));
+        textField_expresion.setText("enter expresion");
+
+        label_answer.setBackground(new java.awt.Color(255, 255, 255));
+        label_answer.setForeground(new java.awt.Color(255, 255, 255));
+        label_answer.setText("Answer");
+
+        textfield_solution.setEditable(false);
+        textfield_solution.setBackground(new java.awt.Color(255, 255, 255));
+        textfield_solution.setForeground(new java.awt.Color(0, 0, 0));
+        textfield_solution.setText("Solution");
+
+        button_solve.setBackground(new java.awt.Color(255, 255, 255));
+        button_solve.setForeground(new java.awt.Color(0, 0, 0));
+        button_solve.setText("SOLVE");
+        button_solve.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_solveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(label_answer)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(textfield_solution))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(textField_expresion, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(button_solve)))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textField_expresion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_solve))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_answer)
+                    .addComponent(textfield_solution, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_solveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_solveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_solveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +129,9 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton button_solve;
+    private javax.swing.JLabel label_answer;
+    private javax.swing.JTextField textField_expresion;
+    private javax.swing.JTextField textfield_solution;
     // End of variables declaration//GEN-END:variables
 }
